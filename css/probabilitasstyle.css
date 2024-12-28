@@ -1,0 +1,91 @@
+.content-wrapper {
+   margin-left: 0;
+   padding: 30px;
+   width: 100%;
+   overflow-y: auto;
+   transition: margin-left 0.3s ease;
+   z-index: 998;
+}
+
+.hasil-probabilitas-title {
+   font-family: 'Poppins', sans-serif;
+   font-weight: bold;
+   font-size: 36px;
+   text-align: center;
+   color: #102A71;
+   margin-bottom: 20px;
+   display: flex;
+   justify-content: center;
+   position: relative;
+}
+
+.hasil-probabilitas-title::after {
+   content: '';
+   display: block;
+   width: 100%;
+   height: 4px;
+   background-color: #d3d3d3;
+   position: absolute;
+   bottom: -8px;
+   left: 0;
+}
+
+.hasil-text {
+   color: #102A71;
+}
+
+.probabilitas-text {
+   color: #F5C400;
+   margin-left: 10px;
+}
+
+.kriteria-header {
+   margin-bottom: 15px;
+   padding-bottom: 10px;
+   border-bottom: 2px solid #d3d3d3;
+}
+
+table {
+   font-family: 'Poppins', sans-serif;
+   width: 100%;
+   border-collapse: collapse;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   background-color: #fff;
+   border-radius: 10px;
+   overflow: hidden;
+   margin-bottom: 30px;
+}
+
+table th, table td {
+   padding: 15px;
+   text-align: center;
+   border: 1px solid #ddd;
+}
+
+table th {
+   background-color: #102A71;
+   color: white;
+   font-weight: bold;
+}
+
+table tr:nth-child(even) {
+   background-color: #f9f9f9;
+}
+
+table tr:hover {
+   background-color: #f1f7ff;
+}
+
+@media (max-width: 768px) {
+   .sidebar {
+      width: 200px;
+   }
+
+   .content-wrapper {
+      margin-left: 0;
+   }
+
+   .hamburger-icon {
+      left: 10px;
+   }
+}

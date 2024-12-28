@@ -1,0 +1,112 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Set height to 100% of the viewport */
+}
+
+.content-wrapper {
+    flex-grow: 1; /* Content will take up available space */
+    padding: 20px;
+    transition: margin-right 0.3s ease;
+}
+
+.menu-container {
+    display: none; /* Menyembunyikan menu secara default */
+    flex-direction: column; /* Menata tombol secara vertikal */
+    justify-content: flex-start; /* Menyusun tombol di bagian atas */
+    align-items: center; /* Menyusun tombol di tengah */
+    background-color: #f8f9fa;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    position: absolute; /* Posisi menu di pojok kanan atas */
+    top: 20px;
+    right: 20px;
+    width: 180px; /* Lebar menu */
+    z-index: 1000;
+}
+
+.menu-container h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Gaya tombol menu */
+.menu-button {
+    width: 100%;
+    height: 70px;
+    margin: 5px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, background-color 0.3s;
+    border-radius: 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+
+/* Efek hover pada tombol menu */
+.menu-button:hover {
+    transform: scale(1.1);
+    background-color: #F5C400;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-button img {
+    width: 40px;
+    height: 40px;
+}
+
+.menu-button div {
+    font-size: 10px;
+    color: #333;
+    margin-top: 2px;
+    text-align: center;
+}
+
+/* Mengubah warna teks saat hover */
+.menu-button:hover div {
+    color: #ffffff;
+}
+
+/* Gaya tombol toggle panah */
+.toggle-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white; /* Warna teks putih agar kontras */
+    background-color: #102a71; /* Warna dasar biru */
+    padding: 10px;
+    border-radius: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Menambahkan transisi */
+}
+
+/* Efek hover pada tombol toggle */
+.toggle-arrow:hover {
+    background-color: #f5c400; /* Warna latar kuning saat hover */
+    color: #102a71; /* Teks berubah menjadi biru saat hover */
+}
+
+/* Transisi rotasi pada panah */
+.toggle-arrow.rotated {
+    transform: rotate(180deg); /* Rotasi 180 derajat saat panah mengarah ke atas */
+}
+
+/* Responsif: untuk layar lebih besar dari 768px */
+@media (min-width: 768px) {
+    .content-wrapper {
+        margin-right: 220px; /* Memberikan ruang di kanan untuk menu pada ukuran layar lebih besar */
+    }
+}
